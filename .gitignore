@@ -6,5 +6,7 @@
 **/*.rs.bk
 
 # Added by cargo
-
 /target
+
+# Ignore image directory (don't want to push Mbs of image data)
+/images
