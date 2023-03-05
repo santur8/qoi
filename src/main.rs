@@ -13,10 +13,11 @@ fn main() {
 		std::process::exit(-1);
 	}
 
-	let op: i32;
 	if &argv[1] == "encode" {
 		println!("encoding");
 	} else if &argv[1] == "decode" {
 		println!("decoding");
+	} else {
+		println!("Invalid file operation. Choose from the following:\nencode\ndecode");
 	}
 }
