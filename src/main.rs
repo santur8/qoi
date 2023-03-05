@@ -19,10 +19,10 @@ fn main() {
 		std::process::exit(-1);
 	}
 
-	let mut file: Result<File> = File::create(full_path);
+	let mut file: Result<File> = File::open(full_path);
 	if &argv[1] == "encode" {
 		println!("encoding");
-		encode::encode(file);
+		encode::encode(&file, &argv[2]);
 	} else if &argv[1] == "decode" {
 		println!("decoding");
 	} else {
